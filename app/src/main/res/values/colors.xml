@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Redesign tokens (light). Dark variants live in values-night/colors.xml. -->
+    <color name="tx_bg">#F3F4F6</color>
+    <color name="tx_surface">#FFFFFF</color>
+    <color name="tx_surface_2">#ECEEF2</color>
+    <color name="tx_stroke">#DADDE3</color>
+    <color name="tx_text">#0E0F11</color>
+    <color name="tx_text_2">#6A6E76</color>
+    <color name="tx_accent">#111111</color>
+    <color name="tx_on_accent">#FFFFFF</color>
+    <color name="brand_bg">#0B0B0C</color>
+    <color name="tx_green">#22A04B</color>
+    <color name="tx_orange">#E08A00</color>
+    <color name="tx_red">#E5484D</color>
+
+    <!-- Terminal screen tokens (always dark). -->
+    <color name="tt_bg">#000000</color>
+    <color name="tt_bar">#0C0C0E</color>
+    <color name="tt_key">#1F2024</color>
+    <color name="tt_surface">#1A1B1F</color>
+    <color name="tt_stroke">#2B2C31</color>
+    <color name="tt_text">#FFFFFF</color>
+    <color name="tt_text_2">#8E8F96</color>
+    <color name="tt_accent">#FFFFFF</color>
+    <color name="tt_green">#34C759</color>
+    <color name="tt_red">#FF453A</color>
+
+    <!-- AMOLED palette: pure black surfaces, hairline strokes. -->
+    <color name="amoled_bg">#000000</color>
+    <color name="amoled_surface">#0A0A0B</color>
+    <color name="amoled_surface_2">#141416</color>
+    <color name="amoled_stroke">#222226</color>
+    <color name="amoled_tt_bar">#000000</color>
+    <color name="amoled_tt_key">#121214</color>
+    <color name="amoled_tt_surface">#0C0C0E</color>
+    <color name="amoled_tt_stroke">#222226</color>
+</resources>

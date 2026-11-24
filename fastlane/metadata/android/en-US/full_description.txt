@@ -1,0 +1,11 @@
+Reverse engineer anything in your pocket. Crémux is built on Termux: decompile, patch, rebuild and ship APKs without a PC.
+
+* REAPER: one-tap jadx, apktool, radare2 and Ghidra with a live log.
+* Smart decompiling: detects packers, Flutter, React Native, Unity and split bundles, then retries with safer settings.
+* AI assistant: OpenAI, Anthropic, Gemini, OpenRouter, Ollama. Every command needs your approval.
+* Rebuild & Sign: rebuild and re-sign apktool projects on the phone.
+* GitHub Sync: push, watch the workflow, download the APK for your ABI.
+* Zip and share: Deflate-9 zips with split parts.
+* Full Termux underneath: shells, packages, SSH, Git, compilers.
+
+Use only on software you own or are authorized to analyze. Not affiliated with the Termux project.

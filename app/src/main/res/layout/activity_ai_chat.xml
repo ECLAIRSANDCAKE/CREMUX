@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/tx_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/partial_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/chat_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:id="@+id/chat_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="4dp"
+                android:paddingBottom="16dp" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/chat_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="40dp"
+                android:paddingBottom="24dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:background="@drawable/bg_avatar"
+                    android:contentDescription="@null"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_brand"
+                    android:tint="?attr/tx_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Reverse-engineering assistant"
+                    android:textColor="?attr/tx_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chat_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="?attr/tx_text_2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/chat_empty_cta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_btn_primary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingStart="28dp"
+                    android:paddingEnd="28dp"
+                    android:text="Add AI provider"
+                    android:textColor="@color/tx_on_accent"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/chat_suggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sug_attach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_suggestion"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:lineSpacingExtra="2dp"
+                        android:padding="16dp"
+                        android:text="Analyze a file\nPick a binary or APK and get a quick triage"
+                        android:textColor="?attr/tx_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/sug_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_suggestion"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:lineSpacingExtra="2dp"
+                        android:padding="16dp"
+                        android:text="What's installed?\nCheck which RE tools are ready to use"
+                        android:textColor="?attr/tx_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/sug_install"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_suggestion"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:lineSpacingExtra="2dp"
+                        android:padding="16dp"
+                        android:text="Install RE tools\nradare2, jadx, apktool, Ghidra and more"
+                        android:textColor="?attr/tx_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/chat_provider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="?attr/tx_text_2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_status_row"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:indeterminateTint="?attr/tx_text_2" />
+
+        <TextView
+            android:id="@+id/chat_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="?attr/tx_text_2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_composer"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/chat_attach"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/ripple_borderless"
+                android:contentDescription="Attach file"
+                android:src="@drawable/ic_attach"
+                android:tint="?attr/tx_text_2" />
+
+            <EditText
+                android:id="@+id/chat_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Message the assistant"
+                android:imeOptions="flagNoExtractUi"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="6"
+                android:minHeight="44dp"
+                android:paddingStart="4dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="10dp"
+                android:textColor="?attr/tx_text"
+                android:textColorHint="?attr/tx_text_2"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/chat_send"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_send_btn"
+                android:contentDescription="Send"
+                android:src="@drawable/ic_arrow_up"
+                android:tint="@color/tx_on_accent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

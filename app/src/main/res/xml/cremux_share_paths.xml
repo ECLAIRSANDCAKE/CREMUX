@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- The terminal home. ShareKit refuses anything outside ~/re and credential locations before handing out a URI. -->
+    <files-path name="home" path="home/" />
+</paths>

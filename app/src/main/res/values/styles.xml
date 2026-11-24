@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="TermuxAlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <!-- Seen in buttons on alert dialog: -->
+        <item name="android:colorAccent">#212121</item>
+    </style>
+
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- In-app dialogs: same surface, stroke, text and buttons as the redesigned screens. -->
+    <style name="CremuxDialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:textColorPrimary">?attr/tx_text</item>
+        <item name="android:textColorSecondary">?attr/tx_text_2</item>
+        <item name="android:textColorHint">?attr/tx_text_2</item>
+        <item name="android:colorAccent">?attr/tx_text</item>
+        <item name="android:colorControlActivated">?attr/tx_text</item>
+        <item name="android:buttonBarButtonStyle">@style/CremuxDialogButton</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/CremuxDialogButton</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CremuxDialogButton</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/CremuxDialogButton</item>
+    </style>
+
+    <style name="CremuxDialogButton" parent="@android:style/Widget.Material.Button.Borderless">
+        <item name="android:textColor">?attr/tx_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+</resources>
